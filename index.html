@@ -4,50 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <title>A Creative Calculator</title>
 </head>
 <body">
 <table class="table">
-                    <div class="div">
+    <div class="div">
         <div class="display" id="result">0</div>
-        <div class="display1" id="result1"></div>
+        <div class="display1" id="result1">0</div>
             <tr>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                <button class="oprator-c">C</button>
+                <button class="oprator-c" onclick="clearDisplay()">C</button>
                 </td>
             </tr>
                 <tr>
-                <td><button class="button">7</button></td>
-                <td><button class="button">8</button></td>
-                <td><button class="button">9</button></td>
-                <td><button class="oprator">*</button></td>
+                <td><button class="button operand" onclick="pressNumber('7')">7</button></td>
+                <td><button class="button operand" onclick="pressNumber('8')">8</button></td>
+                <td><button class="button operand" onclick="pressNumber('9')">9</button></td>
+                <td><button class="oprator" onclick="performOperation('*')">*</button></td>
             </tr>
             <tr>
-                <td><button class="button">4</button></td>
-                <td><button class="button">5</button></td>
-                <td><button class="button">6</button></td>
-                <td><button class="oprator">/</button></td>
+                <td><button class="button operand" onclick="pressNumber('4')">4</button></td>
+                <td><button class="button operand" onclick="pressNumber('5')">5</button></td>
+                <td><button class="button operand" onclick="pressNumber('6')">6</button></td>
+                <td><button class="oprator" onclick="performOperation('/')">/</button></td>
             </tr>
             <tr>
-                <td><button class="button">1</button></td>
-                <td><button class="button">2</button></td>
-                <td><button class="button">3</button></td>
-                <td><button class="oprator">+</button></td>
+                <td><button class="button operand" onclick="pressNumber('1')">1</button></td>
+                <td><button class="button operand" onclick="pressNumber('2')">2</button></td>
+                <td><button class="button operand" onclick="pressNumber('3')">3</button></td>
+                <td><button class="oprator" onclick="performOperation('+')">+</button></td>
             </tr>
             <tr>
                 <td><button class="button">.</button></td>
-                <td><button class="button">0</button></td>
-                <td><button class="oprator">=</button></td>
-                <td><button class="oprator">-</button></td>
+                <td><button class="button operand" onclick="pressNumber('0')">0</button></td>
+                <td><button class="oprator" onclick="calculateResult()">=</button></td>
+                <td><button class="oprator" onclick="performOperation('-')">-</button></td>
             </tr>
     </div>
 </table>
 
+    <javascript src="index.js"></javascript>
 </body>
 </html>
